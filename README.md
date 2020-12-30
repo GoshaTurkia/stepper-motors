@@ -19,6 +19,6 @@
  *  trigger - параметр, отвечающий за направление вращения двигателя.
 Он принимает значения 0 (вращение против часовой стрелки) или 1 (вращение по часовой стрелке). По умолчанию trigger=1
 
-`linear_displacement_S()`
+`linear_displacement_S(float omega, float S, int step_split=1, int trigger=1)`
 
 
