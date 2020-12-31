@@ -74,9 +74,9 @@ int linear_displacement_S(float omega, float S, int step_split=1, int trigger=1)
   // Считаем количество шагов
   int step_count = trunc(200 * S / l);
 
-  if(microstep_count == 0) {
+  if(microstep_count == 0 and step_split != 1) {
     step_count = step_count - 1;
-    microstep_count = 200 *  steps[step_split - 1][0];
+    microstep_count = steps[step_split - 1][0];
   }
   
   // Задаём направление вращения
@@ -155,9 +155,9 @@ int linear_displacement_coordinate(float omega, float finish_coordinate, int ste
   // Считаем количество шагов
   int step_count = trunc(200 * S / l);
 
-  if(microstep_count == 0) {
+  if(microstep_count == 0 and step_split != 1) {
     step_count = step_count - 1;
-    microstep_count = 200 *  steps[step_split - 1][0];
+    microstep_count = steps[step_split - 1][0];
   }
   
   int SPEED = round(1000 * S / (omega * l / (2 * pi)));
@@ -220,9 +220,9 @@ int rotation_angle_control(float omega, float alpha, int step_split=1, int trigg
   // Считаем количество шагов
   int step_count = trunc(200 * S / l);
 
-  if(microstep_count == 0) {
+  if(microstep_count == 0 and step_split != 1) {
     step_count = step_count - 1;
-    microstep_count = 200 *  steps[step_split - 1][0];
+    microstep_count = steps[step_split - 1][0];
   }
   
   // Задаём направление вращения
