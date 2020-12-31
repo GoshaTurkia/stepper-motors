@@ -68,10 +68,11 @@
 `rotation_angle_control(3.0, 45.0, trigger=0);`
 
 `get_position()`
-">>> -8.7"
+
+Вывод: -8.7
 
 `set_position(12.4)`
 
 `get_position()`
 
-">>> 12.4"
+Вывод: 12.4
