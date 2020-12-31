@@ -272,6 +272,13 @@ int rotation_angle_control(float omega, float alpha, int step_split=1, int trigg
 }
 
 
+// Данная функйия позволяет задать позицию мотора (например при старте)
+
+int set_position(coordinate) {
+  coordinates = coordinate;
+}
+
+
 // Данная функция возвращает текущую позицию двигателя
 
 int get_position() {
