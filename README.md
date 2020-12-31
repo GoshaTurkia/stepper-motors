@@ -62,10 +62,16 @@
 Важно! Код каждого примера исполняется независимо от других примеров. В общем случае (кроме последнего примера) начальная позиция имеет координату 0.0
 
 `linear_displacement_S(3.0, 10.0);`
+
 `linear_displacement_coordinate(3.0, -3.7, step_split=4);`
+
 `rotation_angle_control(3.0, 45.0, trigger=0);`
+
 `get_position()`
 >>> -8.7
-`set_position(12.4)
-get_position()`
+
+`set_position(12.4)`
+
+`get_position()`
+
 >>> 12.4
