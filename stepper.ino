@@ -73,11 +73,16 @@ int linear_displacement_S(float omega, float S, int step_split=1, int trigger=1)
   
   // Считаем количество шагов
   int step_count = trunc(200 * S / l);
+
+  if(microstep_count == 0) {
+    step_count = step_count - 1;
+    microstep_count = 200 *  steps[step_split - 1][0];
+  }
   
   // Задаём направление вращения
   digitalWrite(DIR, trigger);
   
-  int SPEED = round(1000 * S / (omega * l /(2 * pi));
+  int SPEED = round(1000 * S / (omega * l /(2 * pi)));
  
   if(step_count > 0) {
     // Задаем полношаговый режим
@@ -149,8 +154,13 @@ int linear_displacement_coordinate(float omega, float finish_coordinate, int ste
   
   // Считаем количество шагов
   int step_count = trunc(200 * S / l);
+
+  if(microstep_count == 0) {
+    step_count = step_count - 1;
+    microstep_count = 200 *  steps[step_split - 1][0];
+  }
   
-  int SPEED = round(1000 * S / (omega * l / (2 * pi));
+  int SPEED = round(1000 * S / (omega * l / (2 * pi)));
   
   if(step_count > 0) {
     // Задаем полношаговый режим
@@ -209,11 +219,16 @@ int rotation_angle_control(float omega, float alpha, int step_split=1, int trigg
   
   // Считаем количество шагов
   int step_count = trunc(200 * S / l);
+
+  if(microstep_count == 0) {
+    step_count = step_count - 1;
+    microstep_count = 200 *  steps[step_split - 1][0];
+  }
   
   // Задаём направление вращения
   digitalWrite(DIR, trigger);
   
-  int SPEED = round(1000 * S / (omega * l / (2 * pi));
+  int SPEED = round(1000 * S / (omega * l / (2 * pi)));
   
   if(step_count > 0) {
     // Задаем полношаговый режим
