@@ -81,3 +81,14 @@
    `get_position();`
 
    Вывод: 12.4
+6) `#include "stepperLib.h"
+
+   void setup(){
+      Serial.begin(9600);
+      linear_displacement_S(3.0, 10.0);
+      Serial.println(get_position());
+   }
+
+   void loop() {
+  
+   }`
